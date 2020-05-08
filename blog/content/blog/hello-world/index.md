@@ -6,6 +6,6 @@ description: "Hello World"
 
 This is my first blog post. I have not written in a long time.
 
-I do not hate writing. But I guess I have been suffering from a prolonged writers block.
+I do not hate writing. But I guess I have been suffering from a prolonged writer's block.
 
 But I am back!
