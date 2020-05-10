@@ -1,6 +1,4 @@
-const { performance } = require("perf_hooks");
-
-function linearSearch(numbers, element) {
+function linearSearch(numbers: [number], element: number) {
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] === element) {
       return i;
@@ -11,7 +9,7 @@ function linearSearch(numbers, element) {
   return -1;
 }
 
-function binarySearch(numbers, element) {
+function binarySearch(numbers: [number], element: number) {
   let startIndex = 0;
   let endIndex = numbers.length - 1;
 
@@ -38,7 +36,7 @@ function binarySearch(numbers, element) {
   return -1;
 }
 
-function generateRandomArray(len, sorted) {
+function generateRandomArray(len: number, sorted: boolean) {
   const numList = Array.from({ length: len }, () =>
     Math.floor(Math.random() * len)
   );

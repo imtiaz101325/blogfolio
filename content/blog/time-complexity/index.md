@@ -34,11 +34,11 @@ To put our analogy in context of code let us look at two searching algorithms an
 
 ### Linear Search
 
-`embed:snippets/javascript/simplePerformance.js#L3-12`
+`embed:snippets/javascript/simplePerformance.ts#L1-10`
 
 ### Binary Search
 
-`embed:snippets/javascript/simplePerformance.js#L14-35`
+`embed:snippets/javascript/simplePerformance.ts#L14-35`
 
 Now if we try to visualize the the running time of different input sizes we get graphs like these:
 
