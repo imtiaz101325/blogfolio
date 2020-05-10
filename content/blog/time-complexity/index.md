@@ -30,53 +30,17 @@ However the _performance_ of this code depends on the machine. Adding exact runn
 
 So instead of performance we need to think about the _complexity_ of our code. Instead of asking "how much time does it take to run?", we could ask "how does our function grow?". For example, imagine we are tasked with setting up a place where students can learn to code. We could setup a physical classroom that needs assets like space, table, chair etc. If we want to grow the size of our classroom we need to add more tables and chairs. If we try to scale this to thousands of students it can become a very daunting task very soon. However, imagine we, instead, setup a virtual classroom. This way we no longer need to manage the physical assets we needed on the previous solution and our task becomes much simpler.
 
-To put our analogy in context of code let us look at two searching algorithms and compare them. We are going to define some simple searching algorithms in JavaScript. The functions will take an input of sorted list of numbers as the first parameter and will return the index it finds that matches the number in the second parameter:
+To put our analogy in context of code let us look at two searching algorithms and compare them. We are going to define some simple searching algorithms in JavaScript. The functions will take an input of sorted list of numbers as the first parameter and will return the index that matches the number in the second parameter:
 
 ### Linear Search
 
-```js
-function linearSearch(numbers, element) {
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] === element) {
-      return i;
-    }
-  }
-
-  // not found
-  return -1;
-}
-```
+`embed:javascript/simplePerformance.js#L3-12`
 
 ### Binary Search
 
-```js
-function binarySearch(numbers, element) {
-  let startIndex = 0;
-  let endIndex = numbers.length - 1;
+`embed:javascript/simplePerformance.js#L14-35`
 
-  while (startIndex <= endIndex) {
-    // find mid position
-    const middle = Math.floor((endIndex + startIndex) / 2);
-
-    if (numbers[middle] === element) {
-      return middle;
-    }
-
-    if (numbers[middle] < element) {
-      // if the number in the middle is smaller
-      // then the element is on the right side
-      startIndex = middle + 1;
-    } else {
-      // if the number in the middle is larger
-      // then the element is on the left side
-      endIndex = middle - 1;
-    }
-  }
-
-  // not found
-  return -1;
-}
-```
+Now if we try to visualize the the running time of different input sizes we get graphs like these:
 
 Our code take different time or space depending on the size of the input. In other words complexity depends on the size of the problem.
 
