@@ -1,3 +1,0 @@
-# Blog
-
-Simple static blog.
