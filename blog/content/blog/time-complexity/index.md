@@ -4,7 +4,7 @@ date: "2020-05-10"
 description: "Time complexity of your code"
 ---
 
-People who writes code everyday in their jobs have many things to consider while building software. They need to keep their code maintainable and well documented. They must also sometimes worry about scale and performance. How does an engineer know if their solution is a good one? Among the things that they could measure are running time and memory usage. This leads them to two important questions:
+People who write code everyday in their jobs have many things to consider while building software. They need to keep their code maintainable and well documented. They must also sometimes worry about scale and performance. How does an engineer know if their solution is a good one? Among the things that they could measure are running time and memory usage. This leads them to two important questions:
 
 1. How long does my program take to run?
 2. How much memory does my program take to run?
@@ -26,19 +26,69 @@ console.timeEnd("fastCode");
 // fastCode: 23ms - timer ended
 ```
 
-Performance depends on the machine. Adding exact running time does not show how our code would perform on a grand scale. It can have different exact times on different hardware. The way we define the running time of our algorithm should be independent of the hardware it is running on. Even for the same algorithm there can be different times based on how our data is organized.
+However the _performance_ of this code depends on the machine. Adding exact running time does not show us how our code would perform on a grand scale. It can have different exact times on different hardware. The way we define the running time of our algorithm should be independent of the hardware it is running on.
 
-Complexity depends on the size of the problem. It take different time or space depending on the size of the input.
+So instead of performance we need to think about the _complexity_ of our code. Instead of asking "how much time does it take to run?", we could ask "how does our function grow?". For example, imagine we are tasked with setting up a place where students can learn to code. We could setup a physical classroom that needs assets like space, table, chair etc. If we want to grow the size of our classroom we need to add more tables and chairs. If we try to scale this to thousands of students it can become a very daunting task very soon. However, imagine we, instead, setup a virtual classroom. This way we no longer need to manage the physical assets we needed on the previous solution and our task becomes much simpler.
 
-Instead of asking how much time does it take we can ask how does this function grows. Asymptotic analysis is the study of algorithm's growth rate.
+To put our analogy in context of code let us look at two searching algorithms and compare them. We are going to define some simple searching algorithms in JavaScript. The functions will take an input of sorted list of numbers as the first parameter and will return the index it finds that matches the number in the second parameter:
+
+### Linear Search
+
+```js
+function linearSearch(numbers, element) {
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] === element) {
+      return i;
+    }
+  }
+
+  // not found
+  return -1;
+}
+```
+
+### Binary Search
+
+```js
+function binarySearch(numbers, element) {
+  let startIndex = 0;
+  let endIndex = numbers.length - 1;
+
+  while (startIndex <= endIndex) {
+    // find mid position
+    const middle = Math.floor((endIndex + startIndex) / 2);
+
+    if (numbers[middle] === element) {
+      return middle;
+    }
+
+    if (numbers[middle] < element) {
+      // if the number in the middle is smaller
+      // then the element is on the right side
+      startIndex = middle + 1;
+    } else {
+      // if the number in the middle is larger
+      // then the element is on the left side
+      endIndex = middle - 1;
+    }
+  }
+
+  // not found
+  return -1;
+}
+```
+
+Our code take different time or space depending on the size of the input. In other words complexity depends on the size of the problem.
+
+Even for the same algorithm there can be different times based on how our data is organized.
 
 could show how different sized inputs have different running time
 
-give khan academy example of class room growth is linear and online shool growth is exponential
-
 could insert code from binary search and show how it works for small and large numbers of inputs.
 
-## Asymptotic bounding
+## Asymptotic analysis
+
+Asymptotic analysis is the study of algorithm's growth rate.
 
 Asymptote: nature of a function as it reaches a very large value and is "bounded"
 
