@@ -4,6 +4,8 @@ date: "2020-05-10"
 description: "Time complexity of your code"
 ---
 
+import Graph from "snippets/time-complexity/graph";
+
 People who write code everyday in their jobs have many things to consider while building software. They need to keep their code maintainable and well documented. They must also sometimes worry about scale and performance. How does an engineer know if their solution is a good one? Among the things that they could measure are running time and memory usage. This leads them to two important questions:
 
 1. How long does my program take to run?
@@ -34,17 +36,15 @@ To put our analogy in context of code let us look at two searching algorithms an
 
 ### Linear Search
 
-`embed:snippets/javascript/simplePerformance.ts#L1-10`
+`embed:snippets/time-complexity/simplePerformance.ts#L1-10`
 
 ### Binary Search
 
-`embed:snippets/javascript/simplePerformance.ts#L14-35`
+`embed:snippets/time-complexity/simplePerformance.ts#L14-35`
 
 Now if we try to visualize the the running time of different input sizes we get graphs like these:
 
-<div>
-  <p>Hello {1 + 1}</p>
-</div>
+<Graph />
 
 Our code take different time or space depending on the size of the input. In other words complexity depends on the size of the problem.
 
