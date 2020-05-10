@@ -42,6 +42,10 @@ To put our analogy in context of code let us look at two searching algorithms an
 
 Now if we try to visualize the the running time of different input sizes we get graphs like these:
 
+<div>
+  <p>Hello {1 + 1}</p>
+</div>
+
 Our code take different time or space depending on the size of the input. In other words complexity depends on the size of the problem.
 
 Even for the same algorithm there can be different times based on how our data is organized.
