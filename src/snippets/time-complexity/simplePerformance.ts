@@ -36,37 +36,7 @@ function binarySearch(numbers: number[], element: number) {
   return -1;
 }
 
-function generateRandomArray(len: number, sorted: boolean) {
-  const numList = Array.from({ length: len }, () =>
-    Math.floor(Math.random() * len)
-  );
-
-  if (sorted) {
-    return numList.sort((a, b) => a - b);
-  }
-
-  return numList;
-}
-
-function mapFunctionPerformanceToInputs(
-  fn: Function,
-  list: number[][],
-  target: number
-) {
-  return list.map(numbers => {
-    const t1 = performance.now() * 1000;
-    
-    fn(numbers, target);
-
-    const t2 = performance.now() * 1000;
-
-    return (t2 - t1);
-  });
-}
-
 export {
   linearSearch,
   binarySearch,
-  generateRandomArray,
-  mapFunctionPerformanceToInputs,
 };
