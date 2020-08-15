@@ -1,3 +1,3 @@
-# Interviewing
+# Notes
 
-Code along with thoughts that I write while preparing for technical interviews
+Code along with thoughts that I write while learning new things.
