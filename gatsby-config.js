@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Interviewing Blog`,
+    title: `Imtiaz's Notes`,
     author: {
       name: `Sk Imtiaz Ahmed`,
       summary: `Front-end guy. Experienced in shipping web apps in React. Looking for opportunities. Prefers remote work.`,
     },
     description: `My personal blog to document code I write while preparing for technical interviews.`,
-    siteUrl: `https://imtiaz101325.github.io/interviewing/`,
+    siteUrl: `https://imti.me/`,
     social: {
       twitter: `imtiaz101325`,
     },
@@ -67,8 +67,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Interviewing Blog`,
-        short_name: `InterviewingBlog`,
+        name: `Imtiaz's Notes`,
+        short_name: `ImtiazsNotes`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -87,5 +87,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-  pathPrefix: "/interviewing",
+  pathPrefix: "/notes",
 };
