@@ -3,12 +3,13 @@ module.exports = {
     title: `Imtiaz's Notes`,
     author: {
       name: `Sk Imtiaz Ahmed`,
-      summary: `Front-end guy. Experienced in shipping web apps in React. Looking for opportunities. Prefers remote work.`,
+      summary: `Passionate about code. Mostly experienced in front-end. Likes to dabble in Computational engineering, Distributed systems and Embedded systems.`,
     },
     description: `My personal blog to document code I write while preparing for technical interviews.`,
     siteUrl: `https://imti.me/`,
     social: {
       twitter: `imtiaz101325`,
+      linkedIn: `imtiaz101325`
     },
   },
   plugins: [
@@ -60,7 +61,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-180671867-1`,
       },
     },
     `gatsby-plugin-feed-mdx`,
@@ -83,9 +84,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
   pathPrefix: "/notes",
 };
