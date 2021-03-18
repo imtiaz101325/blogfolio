@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: imti.me
+Token: ffc820c6fa99785955f734f0c3b996be638e2f7d2bf442fd8a8293fc2a11bb94
